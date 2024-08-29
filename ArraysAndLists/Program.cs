@@ -12,15 +12,14 @@ namespace ArraysAndLists
 
             // Create an int array and populate it with numbers 1-10
 
-            int[] numbers = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
             /* Create a list of type int
              * Name the list "evens"
              */
-            List<int> even = new List<int>();
-            List<int> odd = new List<int>();
-            
 
+            var evens = new List<int>();
+            var odds = new List<int>();
 
 
             /* Create another list of type int
@@ -37,6 +36,18 @@ namespace ArraysAndLists
              * If the number is odd, add it to the odds list.
              */
 
+            foreach (var number in numbers)
+            {
+             if (number % 2 == 0)
+             {
+              evens.Add(number);
+             }
+             else
+             {
+              odds.Add(number);
+             }
+            }
+
 
 
             /* Using a foreach loop,
@@ -52,24 +63,31 @@ namespace ArraysAndLists
             {
              if (numbers[i] % 2 == 0)
              {
-              even.Add(numbers[i]);
+             
+              evens.Add(numbers[i]);
              }
              else
              {
-              odd.Add(numbers[i]);
+              
+              odds.Add(numbers[i]);
              }
 
-             foreach (var item in even)
-             {
-              Console.WriteLine(item);
-             }
+             
+             
+             
+            }
 
-             foreach (var item in odd)
-             {
-              Console.WriteLine(item);
-             }
-             
-             
+            Console.WriteLine("Start of the evens List");
+            foreach (var item in evens)
+            {
+             Console.WriteLine(item);
+              
+            }
+            Console.WriteLine("Start of the odds list");
+            foreach (var item in odds)
+            {
+             Console.WriteLine(item);
+              
             }
         }
     }
