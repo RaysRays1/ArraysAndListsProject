@@ -71,8 +71,6 @@ namespace ArraysAndLists
               
               odds.Add(numbers[i]);
              }
-
-             
              
              
             }
